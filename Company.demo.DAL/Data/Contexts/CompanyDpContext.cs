@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Company.demo.DAL.Data.Contexts
 {
-    internal class CompanyDpContext:DbContext
+    public class CompanyDpContext:DbContext
     {
         public CompanyDpContext() : base(){ }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -21,6 +21,6 @@ namespace Company.demo.DAL.Data.Contexts
         {
             optionsBuilder.UseSqlServer("Server= Shimaa123; Database = CompanyG04; Trusted_Connection= True ;TrustServerCertificate=True");
         }
-        public DbSet<Department> Department { get; set; }   
+        public DbSet<Department> Departments { get; set; }   
     }
 }
